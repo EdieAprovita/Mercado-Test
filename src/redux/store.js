@@ -1,10 +1,14 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
-import descriptionReducer from './descriptionDucks'
+import detailsReducer from './detailsDucks'
+import descriptionsReducer from './descriptionDucks'
+import productsReducer from './productsDucks'
 
 const rootReducer = combineReducers({
-	descriptions: descriptionReducer,
+	details: detailsReducer,
+	descriptions: descriptionsReducer,
+	products: productsReducer,
 })
 
 const composeEnhacers = window._REDUX_DEVTOOLS_COMPOSE_ || compose
