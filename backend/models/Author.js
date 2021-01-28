@@ -3,8 +3,8 @@ const Schema = mongoose.Schema
 
 const authorSchema = new Schema(
 	{
-		name: String,
-		lastname: String,
+		name: 'Edgar',
+		lastname: 'Chavero',
 	},
 	{
 		timestamps: true,
