@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const URL = 'https://api.mercadolibre.com/items/'
+const URL = axios.create({ baseURL: 'https://api.mercadolibre.com/items/' })
 
 //CONSTANTS
 
@@ -38,7 +38,7 @@ export const getDescription = () => async (dispatch, getState) => {
 	})
 }
 
-export const getDescriptionErrir = error => ({
+export const getDescriptionError = error => ({
 	type: GET_DESCRIPTION_ERROR,
 	error,
 })
